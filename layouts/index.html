@@ -1,0 +1,5 @@
+{{define "main"}}
+<p>outside index.html</p>
+    {{ .Site.GetPage.Content }}
+    {{ partial "general_list.html" .}}
+{{end}}

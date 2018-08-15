@@ -1,0 +1,6 @@
+{{define "main"}}
+<p>this is coming from _default/list.html template</p>
+{{ range .Data.Pages }}
+    <a href={{- .Permalink -}}>{{ .Title }}</a>
+{{ end }}
+{{end}}
