@@ -1,0 +1,36 @@
+html {
+    font-family: $font-family-body-system;
+    height: 100%;
+    background-color: $color-page-background;
+    color: $color-text;
+    font-size: 18px;
+    line-height: 1.9;
+} 
+
+h1 {
+    font-size: 3em;
+    line-height: 1.2;
+    font-weight: normal;
+    word-wrap: break-word;
+    letter-spacing: -0.02em;
+}
+a {
+    color: $color-link;
+    text-decoration: none;
+    &:hover{
+        color: $color-link-hover;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    &:active {
+        color: $color-link-active;
+    }
+    &:visited {
+        color: $color-link-visited;
+    }
+}
+
+p {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}

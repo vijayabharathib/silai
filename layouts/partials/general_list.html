@@ -1,3 +1,5 @@
+<ul>
 {{ range .Data.Pages }}
-<a href={{- .Permalink -}}>{{ .Title }}</a>
+<li><a href={{- .Permalink -}}>{{ .Title }}</a></li>
 {{ end }}
+</ul>
