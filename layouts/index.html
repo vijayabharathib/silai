@@ -1,5 +1,5 @@
 {{define "main"}}
-<p>outside index.html</p>
-    {{ .Site.GetPage.Content }}
+<h1>Recent Articles</h1>    
+{{ .Site.GetPage.Content }}
     {{ partial "general_list.html" .}}
 {{end}}

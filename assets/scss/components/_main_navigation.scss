@@ -1,0 +1,25 @@
+.o-site-header{
+
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-between;
+
+    
+    ul {
+        padding: 0;
+        display: flex;
+        list-style: none;
+        min-width: 12em;
+        justify-content: space-around;
+    }
+    
+}
+
+.c-site-logo{
+    display: inline-flex;
+
+    h2{
+        margin: auto;
+        margin-left: 5px;
+    }
+}

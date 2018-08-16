@@ -8,7 +8,7 @@ html {
 } 
 
 h1 {
-    font-size: 3em;
+    font-size: calc(2.7em + .1vw);
     line-height: 1.2;
     font-weight: normal;
     word-wrap: break-word;
