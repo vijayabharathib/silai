@@ -10,11 +10,6 @@ themesdir: "../.."
 
 That line is just to make the development of the theme work with `hugo server` command.
 
-Uncomment the theme name in config.yml:
-```
-theme=silai
-```
-
 ## Running The Theme Locally
 
 # Making it work in Netlify
@@ -32,17 +27,14 @@ Even though the theme name is silai, the folder name is actually repo.
 so build command has to reflect it
 
 ```
-hugo -s ./exampleSite --theme=repo --themesDir=../.. --verbose
+hugo -s ./exampleSite 
 ```
 
 `-s ./exampleSite` is the source of the website with content.
 
-`--theme=repo` is a temporary theme name
+Under **Deploy Settings**, you need to add two environment variables:
+`HUGO_THEME` with a value of `repo` , without any quotes.
 
-`--themesDir=../..` takes the pointer out of exampleSite and out of repo so that you land in `/opt/build/` path (which indeed has a repo theme now , so to speak).
+Another variable named `HUGO_THEMESDIR` with value `../..`. That takes the base folder out of exampleSite and out of repo so that you land in `/opt/build/` path (which indeed has a repo theme now , so to speak).
 
-But one important change that was required in the config file.
-
-The config file within example site cannot have the `theme` token. So I had to remove `theme=silai` - otherwise, netlify build failed.
-
-Also , netlify publish directory has to be `./exampleSite/public` because the build is placed in `public` folder inside the source, in this case, the source is `exampleSite`. 
+Also , netlify **publish directory** deploy settings has to be `./exampleSite/public` because the build is placed in `public` folder inside the source, in this case, the source is `exampleSite`. 
