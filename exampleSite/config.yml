@@ -1,4 +1,4 @@
-baseURL: "http://silai.netlify.com/"
+baseURL: "https://silai.netlify.com/"
 languageCode: "en-us"
 title: "My New Hugo Site"
 theme: "silai"
