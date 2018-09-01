@@ -4,23 +4,57 @@ html {
     background-color: $color-page-background;
     color: $color-text;
     font-size: 18px;
-    line-height: 1.9;
+    line-height: 1.5em;
 } 
 
+body {
+    font-size: calc(1em + .2vw);
+    line-height: calc(1.5em + .2vw);
+    margin: 0;
+}
+
+
+
 h1 {
-    font-size: calc(2.7em + .1vw);
+    font-size: calc(2.6em + 3vw);
     line-height: 1.2;
-    font-weight: normal;
+    font-weight: lighter;
     word-wrap: break-word;
     letter-spacing: -0.02em;
+    margin: 0;
+    color: #000;
 }
+
+h2 {
+    font-size: calc(1.6em + 2vw);
+    font-weight: 500;
+    margin: 1.7em 0 .75em;
+    color: #122;
+}
+
+h3 {
+    font-size: calc(1em + 1vw);
+    text-transform: uppercase;
+    margin: 2em 0 .6em;
+}
+
+p {
+    margin: calc(1em + .2vw) 0;
+}
+
+p,ul,ol {
+    font-weight: 300;
+    letter-spacing: .02em;
+    word-spacing: .02em;
+}
+
 a {
     color: $color-link;
-    text-decoration: none;
+    text-decoration: underline;
     &:hover{
         color: $color-link-hover;
         cursor: pointer;
-        text-decoration: underline;
+        text-decoration: none;
     }
     &:active {
         color: $color-link-active;
@@ -30,7 +64,17 @@ a {
     }
 }
 
-p {
-    margin-top: 2em;
-    margin-bottom: 2em;
+
+em {
+    font-family: serif;
+}
+
+blockquote {
+    font-family: serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+strong {
+    font-weight: 500;
 }

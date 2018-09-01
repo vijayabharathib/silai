@@ -1,10 +1,10 @@
 .o-site-header{
 
-    font-size: 1.2em;
+    font-size: 1.1em;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-
-    
+    padding: 5px;
     ul {
         padding: 0;
         display: flex;
@@ -12,7 +12,10 @@
         min-width: 12em;
         justify-content: space-around;
     }
-    
+
+    @media (min-width:$break-point) {
+        flex-direction: row;
+    }
 }
 
 .c-site-logo{
@@ -20,6 +23,5 @@
 
     h2{
         margin: auto;
-        margin-left: 5px;
     }
 }

@@ -38,3 +38,7 @@ Under **Deploy Settings**, you need to add two environment variables:
 Another variable named `HUGO_THEMESDIR` with value `../..`. That takes the base folder out of exampleSite and out of repo so that you land in `/opt/build/` path (which indeed has a repo theme now , so to speak).
 
 Also , netlify **publish directory** deploy settings has to be `./exampleSite/public` because the build is placed in `public` folder inside the source, in this case, the source is `exampleSite`. 
+
+## Archetypes
+hugo new --kind reviews/books reviews/books/newbook2.md
+will use the archetype from reviews/books.md

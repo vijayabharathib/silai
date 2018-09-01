@@ -2,7 +2,7 @@ $break-point: 60em;
 @media (min-width: $break-point) {
     .site-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1.618fr 1fr;
       grid-template-rows: auto;
       grid-template-areas: "header header" "main aside" "footer footer";
     }
@@ -10,9 +10,11 @@ $break-point: 60em;
 
 .site-main {   
     margin: 0 auto;
-    max-width: 38em;
-    padding: 5px;
+    max-width: 40em;
+    max-width: calc(40em + 1vw);
     grid-area: main;
+    background: $color-content-background;
+    padding: 5px;
   }
   
   .site-header {

@@ -1,5 +1,4 @@
-{{define "main"}}
-<h1>Recent Articles</h1>    
-{{ .Site.GetPage.Content }}
+{{define "main"}}   
+    {{ .Content }}
     {{ partial "general_list.html" .}}
 {{end}}

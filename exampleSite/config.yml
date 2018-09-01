@@ -3,3 +3,19 @@ languageCode: "en-us"
 title: "My New Hugo Site"
 theme: "silai"
 themesdir: "../.."
+params:
+  subtitle: "Portfolio"
+  brand: SH
+
+menu: 
+  main: 
+      - Name: Home
+        URL: /
+        weight: 111
+      - Name: Articles
+        URL: /articles/
+        weight: 222
+      - Name: Reviews
+        URL: /reviews/
+        weight: 333
+
