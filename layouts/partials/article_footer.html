@@ -1,0 +1,12 @@
+<footer>
+    <span>Similar articles: </span>
+    <ul class="c-flat-list" role="list">
+    {{ range .Params.tags }}
+        <li>
+        <a href="{{ $.Site.LanguagePrefix }}/tags/{{ . | urlize }}">
+            {{ . }}
+        </a>
+        </li>
+    {{ end }}
+    </ul>
+</footer>    

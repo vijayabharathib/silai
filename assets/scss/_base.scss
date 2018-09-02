@@ -26,14 +26,14 @@ h1 {
 }
 
 h2 {
-    font-size: calc(1.6em + 2vw);
+    font-size: calc(1.6em + 1vw);
     font-weight: 500;
     margin: 1.7em 0 .75em;
     color: #122;
 }
 
 h3 {
-    font-size: calc(1em + 1vw);
+    font-size: calc(1em + .5vw);
     text-transform: uppercase;
     margin: 2em 0 .6em;
 }
@@ -77,4 +77,10 @@ blockquote {
 
 strong {
     font-weight: 500;
+}
+
+pre {
+    word-wrap: break-word;
+    overflow: auto;
+    max-width: 100%;
 }

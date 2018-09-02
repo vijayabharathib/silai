@@ -9,11 +9,10 @@
         padding: 0;
         display: flex;
         list-style: none;
-        min-width: 12em;
         justify-content: space-around;
     }
 
-    @media (min-width: 420px) {
+    @media (min-width: 600px) {
         flex-direction: row;
     }
 }
@@ -21,7 +20,7 @@
 .c-site-nav { &#{&}{
 
     @media (min-width: 420px){
-        min-width: 16em;
+        min-width: 20em;
     }
 }}
 
