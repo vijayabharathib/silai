@@ -21,7 +21,7 @@
     {{ else }}
         {{ $cssOpts := (dict "targetPath" "styles/main.css" ) }}
         {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
-        <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+        <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen" crossorigin='anonymous'>
     {{ end }}
     
 </head>
