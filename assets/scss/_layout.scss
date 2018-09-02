@@ -1,8 +1,8 @@
-$break-point: 60em;
+$break-point: 70em;
 @media (min-width: $break-point) {
     .site-grid {
       display: grid;
-      grid-template-columns: 1.618fr 1fr;
+      grid-template-columns: 5fr 2fr;
       grid-template-rows: auto;
       grid-template-areas: "header header" "main aside" "footer footer";
     }
@@ -11,10 +11,17 @@ $break-point: 60em;
 .site-main {   
     margin: 0 auto;
     max-width: 40em;
-    max-width: calc(40em + 1vw);
+    max-width: calc(32em + 1vw);
     grid-area: main;
     background: $color-content-background;
-    padding: 5px;
+    padding: calc(.5em + 2vw);
+    @media (min-width: $break-point){
+      margin: calc(1em + 3vw);
+    }
+    @media (min-width: 700px){
+      box-shadow: 2px -2px 18px 1px #677;
+      border-radius: 1em  1em 0 0;
+    }
   }
   
   .site-header {

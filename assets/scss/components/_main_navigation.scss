@@ -13,10 +13,17 @@
         justify-content: space-around;
     }
 
-    @media (min-width:$break-point) {
+    @media (min-width: 420px) {
         flex-direction: row;
     }
 }
+
+.c-site-nav { &#{&}{
+
+    @media (min-width: 420px){
+        min-width: 16em;
+    }
+}}
 
 .c-site-logo{
     display: inline-flex;

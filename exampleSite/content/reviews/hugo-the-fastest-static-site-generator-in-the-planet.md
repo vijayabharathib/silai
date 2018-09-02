@@ -5,9 +5,10 @@ href: "https://"
 layout: "books/single"
 ---
 
+The following is from an [article on Smashing magazine](https://www.smashingmagazine.com/2011/03/technical-web-typography-guidelines-and-techniques/#tt-rhythm). Shows a good number of 69 characters that should fit in a line on large screens:
+
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit accumsan
 
-This book turns Hugo inside out. It is usually better to have actual content while designing. 
 
 ## Example
 For example, having actual content will **tell you** different type of components that you need to design. It could be [links like this](#example) that lead no where, or list like this: 
