@@ -4,5 +4,6 @@
     <p class='c-article-subtitle'>{{ .Params.subtitle }}</p>
     {{ .Content }}
     {{ partial "article_footer.html" . }}
+    {{ partial "related.html" . }}
   </article>
 {{ end }}
