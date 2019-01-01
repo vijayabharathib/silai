@@ -7,8 +7,13 @@
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
           <li class="c-nav-item">
-            <a class='{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}' href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+            <a class='{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}' href="{{ .URL | absLangURL }}" title="{{ .Title }}">{{ .Name }}</a>
           </li>
+        {{ end }}
+        {{ if eq .Lang "ta" }}
+            <li class="c-nav-item"><a href="/en/">English</a></li>
+        {{ else }}
+            <li class="c-nav-item"><a href="/ta/">தமிழ்</a></li>
         {{ end }}
       </ul>
     </nav>

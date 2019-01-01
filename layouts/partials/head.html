@@ -3,13 +3,15 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  {{ if .IsTranslated }}
+  {{ range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+  {{ end }}
+{{ end }}
   <!-- Site Title, Description -->
-{{ if .IsHome }}
-<title>{{ print "Home" " | " $.Site.Title " ⛵ " $.Site.Params.Subtitle }}</title>
-{{ else }}
+
 <title>{{ print .Title " | " $.Site.Title " ⛵ " $.Site.Params.Subtitle }}</title>
-{{- end -}}
+
 {{- with  .Description | default .Params.Subtitle | default .Site.Params.Subtitle |  default .Summary }}
 <meta name="description" content="{{ . }}">
 {{- end }}

@@ -1,5 +1,10 @@
 <footer>
-    <span>Related Topics: </span>
+    <span>{{ i18n "relatedtopics"}}:
+    {{ if .Params.tags }}
+    {{ else }}
+    {{ i18n "none"}}
+    {{ end }}
+    </span>
     <ul class="c-flat-list" role="list">
     {{ range .Params.tags }}
         <li>

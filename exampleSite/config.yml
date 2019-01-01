@@ -1,5 +1,6 @@
 baseURL: "https://silai.netlify.com/"
 languageCode: "en-us"
+defaultContentLanguage: "en"
 title: "My New Hugo Site"
 theme: "silai"
 themesdir: "../.."
@@ -19,3 +20,49 @@ menu:
         URL: /reviews/
         weight: 333
 
+
+languages:
+  en:
+    languageName: English
+    contentDir: content/english
+    params:
+      brand: Silai
+      subtitle: Theme
+    title: My New Hugo Site
+    weight: 1
+    menu:
+      main:
+          - Name: "Home"
+            Identifier: "home"
+            URL: "/"
+            weight: 100
+          - Name: "Articles"
+            Identifier: "articles"
+            URL: "/articles/"
+            weight: 200
+          - Name: "Reviews"
+            Identifier: "reviews"
+            URL: "/reviews"
+            weight: 300
+  ta:
+    languageName: தமிழ்
+    contentDir: content/tamil
+    params:
+      brand: சிலை
+      subtitle: வடிவம்
+    title: புதிய ஹ்யூகோ வடிவம்
+    weight: 2
+    menu:
+      main:
+          - Name: "முகப்பு"
+            Identifier: "home"
+            URL: "/"
+            weight: 100
+          - Name: "பதிவுகள்"
+            Identifier: "articles"
+            URL: "/articles/"
+            weight: 200
+          - Name: "நூலறிமுகம்"
+            Identifier: "reviews"
+            URL: "/reviews"
+            weight: 300
