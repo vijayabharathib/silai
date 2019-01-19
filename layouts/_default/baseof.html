@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+{{ if eq .Lang "ta" }} 
+<html class='lang-ta'>
+{{ else }}
+<html class='lang-en'>
+{{ end }}
     {{- partial "head.html" . -}}
     <body>
         {{- partial "header.html" . -}}

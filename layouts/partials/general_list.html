@@ -1,5 +1,5 @@
-<ul>
+<ul class='c-article-list'>
 {{ range .Data.Pages }}
-<li><a href={{- .Permalink -}}>{{ .Title }}</a></li>
+<li class='c-list-item'><a href={{- .Permalink -}}>{{ .Title }}</a></li>
 {{ end }}
 </ul>
