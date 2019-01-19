@@ -1,0 +1,10 @@
+
+    <ul class="c-flat-list" role="list">
+    {{ range .Params.categories }}
+        <li>
+        <a href="{{ $.Site.LanguagePrefix }}/categories/{{ . | urlize }}">
+            {{ . }}
+        </a>
+        </li>
+    {{ end }}
+    </ul>

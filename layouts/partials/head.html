@@ -10,7 +10,7 @@
 {{ end }}
   <!-- Site Title, Description -->
 
-<title>{{ print .Title " | " $.Site.Title " ⛵ " $.Site.Params.Subtitle }}</title>
+<title>{{ print .Title " | " $.Site.Title " ☬ " $.Site.Params.Subtitle }}</title>
 
 {{- with  .Description | default .Params.Subtitle | default .Site.Params.Subtitle |  default .Summary }}
 <meta name="description" content="{{ . }}">

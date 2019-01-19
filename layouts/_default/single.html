@@ -1,7 +1,10 @@
 {{ define "main"}}
   <article role="main">
+    <!--a href="{{ .CurrentSection.RelPermalink }}">{{ .CurrentSection.Name}} </a-->
+    {{ partial "categories.html" . }}
     {{ partial "article_header.html" . }}
     <p class='c-article-subtitle'>{{ .Params.subtitle }}</p>
+    <div class='featured'><img src="{{ .Params.featured_image }}"></div>
     {{ .Content }}
     {{ partial "article_footer.html" . }}
     {{ partial "related.html" . }}

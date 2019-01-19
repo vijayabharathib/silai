@@ -17,10 +17,9 @@ $break-point: 70em;
     padding: calc(.5em + 2vw);
     @media (min-width: $break-point){
       margin: calc(1em + 3vw);
-    }
-    @media (min-width: 700px){
-      box-shadow: 2px -2px 18px 1px #677;
-      border-radius: 1em  1em 0 0;
+      box-shadow: 1px 1px 10px 1px #abb;
+      border-radius: .5em  .5em 0 0;
+      border: 1px solid #bcc;
     }
   }
   
@@ -34,4 +33,17 @@ $break-point: 70em;
   
   .site-footer {
     grid-area: footer;
+  }
+
+  .c-flat-list {
+    list-style: none;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    li { 
+      margin-right: 1em;
+    }
   }

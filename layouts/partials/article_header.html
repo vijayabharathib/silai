@@ -1,5 +1,4 @@
 <header class='o-article-header'>
-    <h1>{{ .Title }}</h1>
     <ul class="c-article-meta">
         <li><time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
         {{ if and (eq .Lang "ta") ($.Site.Data.month) }}
@@ -8,6 +7,9 @@
             {{ i18n "published" }}: {{ .Date.Format "2 Jan, 2006" }}
         {{ end }}
           </time></li>
+    </ul>
+    <h1>{{ .Title }}</h1>
+    <ul class="c-article-meta">
         <li class="c-meta-length"> {{ .ReadingTime }} {{ i18n "readingtime" }} </li>
         <li>
         {{ if .IsTranslated }}
