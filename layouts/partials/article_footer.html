@@ -1,10 +1,10 @@
 <footer>
-    <span>{{ i18n "relatedtopics"}}:
+    <strong>{{ print (i18n "related") " " (i18n "topics")}}:
     {{ if .Params.tags }}
     {{ else }}
     {{ i18n "none"}}
     {{ end }}
-    </span>
+    </strong>
     <ul class="c-flat-list" role="list">
     {{ range .Params.tags }}
         <li>
@@ -14,4 +14,6 @@
         </li>
     {{ end }}
     </ul>
+
+    {{- partial "social_share.html" . -}}
 </footer>    
