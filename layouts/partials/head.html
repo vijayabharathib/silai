@@ -3,6 +3,11 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="canonical" href="{{ .URL | absLangURL }}" />
+  <link rel="alternate" href="{{ "index.xml" | absLangURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
+  <link rel="shortcut icon" href="/favicon.ico">
+
   {{ if .IsTranslated }}
   {{ range .AllTranslations }}
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
@@ -25,5 +30,8 @@
         {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen" crossorigin='anonymous'>
     {{ end }}
-    
+    {{- partial "opengraph_card.html" . -}}
+    {{- partial "twitter_card.html" . -}}
+    {{- partial "google_rich_card.html" . -}}
+    {{- partial "head_custom.html" . -}}
 </head>
