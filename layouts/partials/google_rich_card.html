@@ -25,6 +25,11 @@
             "about": "{{- .Params.subtitle -}}",
             "wordCount": {{- .FuzzyWordCount -}},
             "datePublished": "{{- .PublishDate -}}",
+            "dateModified": "{{- .PublishDate -}}",
+            "mainEntityOfPage":{
+                "@type":"WebPage",
+                "@id": "{{- .URL | absURL -}}"
+            },
             "publisher":{
                 "@type":"Organization",
                 "name":"vijayabharathi.in",
@@ -42,8 +47,8 @@
             ,"headline": "{{ . }}"
             {{- end }}
         {{ end }}
-        {{ if isset .Params "image" }}
-            ,"image": "{{ .Params.image | absURL }}"
+        {{ if isset .Params "featured_image" }}
+            ,"image": "{{ .Params.featured_image | absURL }}"
         {{ end }}
 }
 </script>
