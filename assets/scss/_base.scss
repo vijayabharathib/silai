@@ -99,6 +99,9 @@ blockquote {
     @media (min-width: $break-point){
         margin: 2em 1em;
     }
+    p {
+        margin: 0;
+    }
 }
 
 pre {
