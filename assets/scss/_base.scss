@@ -6,6 +6,8 @@ html {
     font-size: 18px;
     line-height: 1.5em;
     background-color: #eff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     @media (min-width: $break-point){
         background-color: $color-page-background;
     }
