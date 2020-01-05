@@ -20,3 +20,5 @@
   translation: "Tweet this post"
 - id: "google-post"
   translation: "Share on Google+"
+- id: "toc" 
+  translation: "Sections"
