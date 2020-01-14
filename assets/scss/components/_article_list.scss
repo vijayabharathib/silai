@@ -1,7 +1,29 @@
 .c-article-list { &#{&} {
-    padding-left: 1em;
+    padding-left: .5em;
+    list-style: none;
 }}
 
 .c-list-item { &#{&} {
-    margin-bottom: 1em;
+    margin-bottom: 4em;
+}}
+
+
+.c-list-item {
+     
+    h2 {
+        font-weight: 200;
+        margin: 0; 
+    }
+    a {
+        font-size: 1.2em;
+        text-decoration: none;
+        line-height: 1.1;
+    }
+}
+
+.c-item-date { &#{&}{
+    font-size: .7em;
+    border-top: 1px solid #bbc;
+    padding-top: 1em;
+    margin: 1em;
 }}

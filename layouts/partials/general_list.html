@@ -1,5 +1,15 @@
 <ul class='c-article-list'>
 {{ range .Data.Pages }}
-<li class='c-list-item'><a href={{- .Permalink -}}>{{ .Title }}</a></li>
+<li class='c-list-item'>
+    <div class='c-item-date'>
+        {{ if and (eq .Lang "ta") ($.Site.Data.month) }}
+            {{ .Date.Day }} {{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }} 
+        {{ else }}
+            {{ .Date.Format "2 Jan, 2006" }}
+        {{ end }}
+    </div>
+    <h2><a class='c-item-title' href={{- .Permalink -}}>{{ .Title }}</a></h2>
+    <p class='c-item-desc'>{{ .Description }}</p>
+</li>
 {{ end }}
 </ul>
