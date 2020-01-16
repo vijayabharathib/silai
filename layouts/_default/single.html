@@ -3,7 +3,7 @@
     <!--a href="{{ .CurrentSection.RelPermalink }}">{{ .CurrentSection.Name}} </a-->
     {{ partial "categories.html" . }}
     {{ partial "article_header.html" . }}
-    <p class='c-article-subtitle'>{{ .Params.subtitle }}</p>
+    <p class='c-article-subtitle'>{{ .Description }}</p>
     <div class='featured'><img src="{{ .Params.featured_image }}"></div>
     {{ if .Params.toc }}
       <div class='toc'>
