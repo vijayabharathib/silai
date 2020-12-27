@@ -6,13 +6,26 @@
 {{ end }}
     {{- partial "head.html" . -}}
     <body>
-        {{- partial "header.html" . -}}
-        <div class="site-grid">
-        <main class="site-main">
-            {{- block "main" . }}{{- end }}
+        {{- partial "header.html" . -}}        
+        <main class="site-grid">
+            {{ if (eq .IsPage true) }}             
+                <div class="article-intro">
+                    {{ partial "article_header.html" . }}
+                </div>
+            {{ end }}
+            <aside class="site-aside">
+                {{ if (eq .IsPage true) }}             
+                    {{ partial "article_toc.html" . }}
+                {{ else }}
+                    <!-- {{ partial "home_page_sidebar.html" . }} -->
+                {{ end }}
+            </aside>
+            <div class="site-main">
+                {{- block "main" . }}{{- end }}
+            </div>
+            
         </main>
-        </div>
-        {{- partial "footer.html" . -}}
+        {{- partial "site_footer.html" . -}}
     </body>
 
 </html>

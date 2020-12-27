@@ -1,28 +1,17 @@
 <header class='o-article-header'>
-    <ul class="c-article-meta">
+    {{ partial "article_categories.html" . }}
+    <h1 class="article-title">{{ .Title }}</h1>
+    <ul class="c-article-meta c-flat-list">
         <li><time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
-        {{ if and (eq .Lang "ta") ($.Site.Data.month) }}
-            {{ i18n "published"}}: {{ .Date.Day }} {{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }} 
-        {{ else }}
-            {{ i18n "published" }}: {{ .Date.Format "2 Jan, 2006" }}
-        {{ end }}
-          </time></li>
-    </ul>
-    <h1>{{ .Title }}</h1>
-    <ul class="c-article-meta">
-        <li class="c-meta-length"> {{ .ReadingTime }} {{ i18n "readingtime" }} </li>
-        <li>
-        {{ if .IsTranslated }}
-            {{ range .Translations }}
-            <a href="{{ .Permalink }}">
-                {{ if eq .Lang "ta" }}
-                {{ "தமிழில் வாசிக்க "}}
-                {{ else }}
-                {{ "Read in English" }}
-                {{ end }}
-            </a>
-            {{ end}}
-        {{ end }}
-        </li>
+            
+            {{ if and (eq .Lang "ta") ($.Site.Data.month) }}
+            {{ .Date.Day }} {{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }} 
+            {{ else }}
+            {{ .Date.Format "2 Jan, 2006" }}
+            {{ end }}
+        </time></li>
+        <li class="c-meta-length">  {{ .ReadingTime }} {{ i18n "readingtime" }} </li>
+        {{ partial "translation_link.html" . }}
+  
     </ul>
 </header>    

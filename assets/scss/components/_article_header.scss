@@ -1,4 +1,14 @@
 
+.article-intro { 
+    background: #57b0fb;
+    padding: .5em;
+    @media (min-width: $break-point){
+        padding: 2em;
+        padding: calc(2em + 1vw);
+    }
+
+}
+
 .c-article-subtitle { &#{&}{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.5em;
@@ -8,11 +18,26 @@
 }}
 
 .c-article-meta { &#{&} {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-    padding: 0;
-    color: #455;
     font-size: .8em;
+    margin: 0 3em;
+    display: flex;
+    justify-content: center;
+    color: #013;
+    a {
+        color: #013;
+    }
 }}
 
+.article-title { 
+    margin: .5em auto;
+    color: #fff;
+    text-align: center;
+}
+
+.c-article-categories {
+    display: flex;
+    justify-content: center;
+    a { 
+        color:$color-link-hover;    
+    }
+}

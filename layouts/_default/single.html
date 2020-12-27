@@ -1,16 +1,8 @@
 {{ define "main"}}
   <article role="main">
-    <!--a href="{{ .CurrentSection.RelPermalink }}">{{ .CurrentSection.Name}} </a-->
-    {{ partial "categories.html" . }}
-    {{ partial "article_header.html" . }}
+    <!--a href="{{ .CurrentSection.RelPermalink }}">{{ .CurrentSection.Name}} </a-->    
     <p class='c-article-subtitle'>{{ .Description }}</p>
-    <div class='featured'><img src="{{ .Params.featured_image }}"></div>
-    {{ if .Params.toc }}
-      <div class='toc'>
-        <h3>{{ print (i18n "toc") ":" }}</h3>
-        {{ .TableOfContents }}
-      </div>
-    {{ end }}
+    <div class='featured'><img src="{{ .Params.featured_image }}"></div>    
     {{ .Content }}
     {{ partial "article_footer.html" . }}
     {{ partial "related.html" . }}

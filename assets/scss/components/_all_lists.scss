@@ -1,0 +1,16 @@
+
+  .c-flat-list {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    li { 
+      margin: 0 1em;
+    }
+  }
+
+  .c-list-no-dot {
+    list-style: none;    
+  }
