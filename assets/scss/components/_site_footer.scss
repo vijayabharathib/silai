@@ -1,0 +1,14 @@
+.site-footer{
+    padding: .5em;
+    box-shadow: rgba(35, 77, 100, 0.5) -10px 5px 20px 0px;
+    @media (min-width: $break-point){
+        padding: 5em;
+        margin-top: 10em;
+    }
+    p {
+        margin: 0 auto;
+        max-width: 30em;
+        text-align: center;
+    }
+
+}

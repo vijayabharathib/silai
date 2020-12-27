@@ -1,0 +1,13 @@
+{{ if .IsTranslated }}
+        <li>
+            {{ range .Translations }}
+            <a href="{{ .Permalink }}">
+                {{ if eq .Lang "ta" }}
+                {{ "தமிழில் வாசிக்க "}}
+                {{ else }}
+                {{ "Read in English" }}
+                {{ end }}
+            </a>
+            {{ end}}
+        </li>
+{{ end }}

@@ -2,9 +2,9 @@ $break-point: 70em;
 @media (min-width: $break-point) {
     .site-grid {
       display: grid;
-      grid-template-columns: 5fr 2fr;
+      grid-template-columns: 2fr 5fr;
       grid-template-rows: auto;
-      grid-template-areas: "header header" "main aside" "footer footer";
+      grid-template-areas: "header header" "intro intro" "aside main" "footer footer";
     }
 }
 
@@ -13,37 +13,38 @@ $break-point: 70em;
     max-width: 40em;
     max-width: calc(32em + 1vw);
     grid-area: main;
-    background: $color-content-background;
     padding: calc(.5em + 2vw);
+    padding-top: .5em;
+    position: relative;
     @media (min-width: $break-point){
-      margin: calc(1em + 3vw);
-      box-shadow: 1px 1px 10px 1px #abb;
-      border-radius: .5em  .5em 0 0;
-      border: 1px solid #bcc;
+      margin: auto calc(1em + 3vw);
+      
     }
   }
   
   .site-header {
     grid-area: header;
   }
+
+  .article-intro {
+    grid-area: intro;
+  }
+
+  .site-aside {
+    grid-area: aside;
+  }
   
+  .toc {
+    position: sticky;
+    top: 6em;
+    @media (min-width: $break-point){
+    text-align: right;
+    }
+  }
   .side-bar {
     grid-area: aside;
   }
   
   .site-footer {
     grid-area: footer;
-  }
-
-  .c-flat-list {
-    list-style: none;
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    li { 
-      margin-right: 1em;
-    }
   }

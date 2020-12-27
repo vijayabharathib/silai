@@ -1,0 +1,6 @@
+{{ if .Params.toc }}
+    <div class='toc'>
+        <!-- <h3>{{ print (i18n "toc") ":" }}</h3> -->
+        {{ .TableOfContents }}
+    </div>
+{{ end }}
