@@ -6,14 +6,9 @@
     {{ end }}
     </strong>
     <ul class="c-flat-list" role="list">
-    {{ range .Params.tags }}
-        <li>
-        <a href="{{ $.Site.LanguagePrefix }}/tags/{{ . | urlize }}">
-            {{ . }}
-        </a>
-        </li>
-    {{ end }}
+        {{ range (.GetTerms "tags") }}
+            <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+       {{ end }}
     </ul>
-
     {{- partial "social_share.html" . -}}
 </footer>    

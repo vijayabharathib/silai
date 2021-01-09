@@ -1,9 +1,9 @@
 <ul class='c-article-list'>
-{{ range .Data.Pages }}
+{{ range . }}
 <li class='c-list-item'>
     <div class='c-item-date'>
-        {{ if and (eq .Lang "ta") ($.Site.Data.month) }}
-            {{ .Date.Day }} {{ index $.Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }} 
+        {{ if and (eq .Lang "ta") (.Site.Data.month) }}
+            {{ .Date.Day }} {{ index .Site.Data.month (printf "%d" .Date.Month) }} {{ .Date.Year }} 
         {{ else }}
             {{ .Date.Format "2 Jan, 2006" }}
         {{ end }}

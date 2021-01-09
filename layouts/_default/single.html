@@ -2,7 +2,12 @@
   <article role="main">
     <!--a href="{{ .CurrentSection.RelPermalink }}">{{ .CurrentSection.Name}} </a-->    
     <p class='c-article-subtitle'>{{ .Description }}</p>
-    <div class='featured'><img src="{{ .Params.featured_image }}"></div>    
+    <div class='featurded'>
+      <img src="{{ .Params.featured_image }}"></img>
+      {{ if isset .Params "image_caption_credits" }}
+        <p class="image_credits">{{ .Params.image_caption_credits | markdownify }}</p>
+      {{ end }}
+    </div> 
     {{ .Content }}
     {{ partial "article_footer.html" . }}
     {{ partial "related.html" . }}

@@ -1,5 +1,5 @@
 {{define "main"}}
-<h1>{{ .Title }}</h1>
-{{ .Content }}
-{{ partial "general_list.html" .}}
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ partial "general_list.html" .Data.Pages }}
 {{end}}

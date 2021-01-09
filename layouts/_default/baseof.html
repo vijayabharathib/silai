@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 {{ if eq .Lang "ta" }} 
-<html class='lang-ta'>
+<html class='lang-ta' lang="ta">
 {{ else }}
-<html class='lang-en'>
+<html class='lang-en' lang="en">
 {{ end }}
     {{- partial "head.html" . -}}
     <body>
@@ -24,8 +24,8 @@
                 {{- block "main" . }}{{- end }}
             </div>
             
+            {{- partial "site_footer.html" . -}}
         </main>
-        {{- partial "site_footer.html" . -}}
     </body>
 
 </html>
